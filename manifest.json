@@ -8,9 +8,9 @@
     "activeTab",
     "storage",
     "webNavigation",
-    "ai",
-    "contextMenus"
+    "ai" 
   ],
+  
   "optional_permissions": [
     "aiLanguageModel",
     "aiSummarizer",
@@ -21,17 +21,11 @@
   
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Chalamandra - Your dialectical thinking companion",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
+    "default_title": "Chalamandra - Your dialectical thinking companion"
   },
   
   "background": {
-    "service_worker": "service-worker.js",
-    "type": "module"
+    "service_worker": "service-worker.js"
   },
   
   "content_scripts": [
@@ -42,12 +36,6 @@
     }
   ],
   
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-
   "web_accessible_resources": [{
     "resources": ["dialectic-engine.js"],
     "matches": ["<all_urls>"]
