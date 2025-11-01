@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "Chalamandra QuantumMind XYZ",
+  "version": "1.0.0",
+  "description": "Transform decision paralysis into actionable clarity through quantum dialectical analysis",
+  
+  "permissions": [
+    "activeTab",
+    "storage",
+    "webNavigation",
+    "ai",
+    "contextMenus"
+  ],
+  "optional_permissions": [
+    "aiLanguageModel",
+    "aiSummarizer",
+    "aiRewriter",
+    "aiTranslator",
+    "aiProofreader"
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Chalamandra - Your dialectical thinking companion",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "web_accessible_resources": [{
+    "resources": ["dialectic-engine.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
+
+
