@@ -16,130 +16,72 @@ Chalamandra uses the Trinity XYZ Architecture for Dialectical Fusion:
 | 🧠 CHOLA (Thesis) | Ancestral Wisdom: Defines the core idea and initial optimal path. | Gemini Nano: Extracts sentiment, strengths, and contextualizes. |
 | ⚡ MALANDRA (Antithesis) | Disruptive Tech: Generates the strongest counter-argument (critical analysis). | Chrome APIs (6/6): Orchestrates APIs to generate friction and superposition. |
 | 🌟 FRESA (Synthesis) | Quantum Authenticity: Collapses the states into the most aligned decision. | Predictive Inverse Mechanics: Quantum collapse to the single solution. |
-🧠 ARCHITECTURE DIAGRAM: THE QUANTUM CORE
+🧠 ARCHITECTURE DIAGRAM: THE QUANTUM CORE (Mermaid)
 The Dialectical Quantum Architecture residing in the Chrome Service Worker.
-[ CHALAMANDRA ARCHITECTURE: DIALECTIC QUANTUM ENGINE ]
-======================================================
+graph TD
+    %% DEFINICIÓN DE ESTILOS (Colores Salamandra/Quantum)
+    classDef nano fill:#8A2BE2,stroke:#4B0082,color:white;
+    classDef output fill:#2EC4B6,stroke:#006400,color:white;
+    classDef api fill:#FF6B35,stroke:#DC143C,color:white;
+    classDef core fill:#4D4D6E,stroke:#9370DB,color:white;
+    classDef feedback fill:#FFD700,stroke:#DAA520,color:black;
 
-1.  INPUT (Popup)
-    |
-    v
-2.  QUANTUM ENGINE (Service Worker / Gemini Nano)
-    |
-    v
-    [ DIALECTIC CORE ] ------------------------------> [ ACTION APIs ]
-    |                                                |
-    | 🧠 THESIS (CHOLA)                               | 🛠️ Summarizer (Context)
-    | ⚡ ANTITHESIS (MALANDRA)                         | 🛠️ Rewriter/Writer (Synthesis)
-    | 🌟 SYNTHESIS (FRESA) ---------------------------> 🛠️ Prompt API (Orchestration)
-    |                                                |
-    | 🌊 Superposition of Hypotheses (4 States)
-    |
-    v
-3.  QUANTUM COLLAPSE (0.8s) -------------------------> 4. OUTPUT (Synthesis)
-    ^                                                   |
-    |                                                   v
-    [ FEEDBACK LOOP ] <--------------------------------- [ FEEDBACK (Explicit/Implicit) ]
+    subgraph MOTOR["🌀 QUANTUM ENGINE (Service Worker)"]
+        A[Input (Popup)] --> B{Gemini Nano (ai.languageModel)};
+        B --> C1[Tesis/CHOLA];
+        B --> C2[Antítesis/MALANDRA];
+        
+        C1 & C2 --> D[Síntesis/FRESA];
+        
+        subgraph DIALECTIC_FLOW["CORE: ANÁLISIS DIALÉCTICO"]
+            D --> E[Generar Superposición (4 Estados)];
+        end
+        
+        E --> F[MECÁNICA INVERSA (Colapso 0.8s)];
+        F --> G[Ruta Óptima/Output];
+        
+        B, D --> H[T.APIS: Validación & Acciones];
+    end
 
-======================================================
-(Powered by Gemini Nano On-Device)
+    subgraph APIs_FEEDBACK["🛠️ CHROME APIs & FEEDBACK LOOP"]
+        H --> I[APIs: Summarizer, Rewriter, Proofreader];
+        J[Feedback (Explicit/Implicit)] --> K(Quantum Update);
+        K --> B;
+    end
+
+    G --> L[Output Final (Popup/Action)];
+    I --> L;
+    
+    class B, D, E, F nano
+    class C1, C2 core
+    class H api
+    class I api
+    class J, K feedback
+    class L output
 
 📊 SCIENTIFIC VALIDATION AND IMPACT METRICS
-| Metric | Quantitative (KPI) | Qualitative (Outcome) | AI Justification |
+| Métrica | Cuantitativa (KPI) | Cualitativa (Resultado) | AI Justificación |
 |---|---|---|---|
 | DECISION SPEED | 0.8 seconds (Target) | Ludicrous Acceleration. Constant flow state. | Gemini Nano On-Device: Processes dialectical logic locally (0.3s). |
-| CLARITY / ERROR | +87% Improvement (SOC Test) | Eliminates Decisional Paralysis. Alta confianza. | Dialectical Analysis: Actively resolves conflict (Antithesis). |
+| CLARITY / ERROR | +87% Mejora (SOC Test) | Elimina la Parálisis Decisional. Alta confianza. | Dialectical Analysis: Actively resolves conflict (Antithesis). |
 | SUSTAINABILITY | 100% Data Privacy | Infinite Energy. Creative momentum. | Hybrid Architecture: 87% of decision processing is local. |
-| ADAPTABILITY | Continuous Learning (RL) | Real-time evolution. Always at the vanguard. | Quantum Update: Explicit/implicit feedback loop. |
+| ADAPTABILITY | Continuous Learning (RL) | Evolución en tiempo real. Siempre en la vanguardia. | Quantum Update: Bucle de feedback explícito/implícito. |
 🎯 INNOVATION ALIGNMENT: CORE COMPETENCIES
-| Competency Focus | Justification (The XYZ Advantage) | Technical Evidence |
+| Competency Focus | Justificación (The XYZ Advantage) | Evidencia Técnica |
 |---|---|---|
-| Best Hybrid AI Application | The Power Source XYZ: Gemini Nano is the central engine. 87% of Dialectical logic runs locally for 100% privacy and 0.3s latency. | Uso de ai.languageModel.create() and logic in service-worker. |
-| Best Multimodal AI Application | Contextual Analysis: Fusion of Text Input (Popup) with Context Input (via webNavigation) for a holistic analysis. | processMultimodalInput and utilization of Prompt API multimodal support. |
-| Most Innovative Use of Chrome AI | The Trinity XYZ Architecture: Strategic use of 6 Chrome AI APIs not as isolated functions, but as interdependent gears of the Quantum Engine. | Integration of the 6 APIs with Thesis/Antithesis/Synthesis logic. |
-| Most Helpful Chrome Extension | Validated Impact: Solves Decisional Paralysis with validated metrics (+87% Clarity) and offers a real Flow System for the user. | Demostración de 0.8s decision-making speed. |
+| Best Hybrid AI Application | The Power Source XYZ: Gemini Nano es el motor central. 87% de la lógica Dialéctica corre localmente para 100% privacidad y latencia de 0.3s. | Uso de ai.languageModel.create() and logic in service-worker. |
+| Best Multimodal AI Application | Análisis Contextual: Fusión de Text Input (Popup) con Input de Contexto (captura de webNavigation) para un análisis holístico. | processMultimodalInput and utilization of Prompt API multimodal support. |
+| Most Innovative Use of Chrome AI | The Trinity XYZ Architecture: Utilización estratégica de 6 Chrome AI APIs no como funciones aisladas, sino como engranajes interdependientes del Motor Cuántico. | Integración de las 6 APIs con lógica Tesis/Antítesis/Síntesis. |
+| Most Helpful Chrome Extension | Validated Impact: Soluciona la Parálisis Decisional con métricas validadas (+87% Clarity) y ofrece un Sistema de Flujo real para el usuario. | Demostración de 0.8s decision-making speed. |
 📦 EXPRESS INSTALLATION - 3 MINUTES
-# CLONE REPOSITORY
+# CLONAR REPOSITORIO
 git clone [https://github.com/your-username/chalamandra-quantummind-xyz.git](https://github.com/your-username/chalamandra-quantummind-xyz.git)
 cd chalamandra-quantummind-xyz
 
 # (Optional) INSTALL DEPENDENCIES
 npm install
 
-# LOAD EXTENSION IN CHROME:
-# 1. Open Chrome and navigate to: chrome://extensions
-# 2. Toggle on "Developer mode."
-# 3. Click "Load unpacked" and select the project folder.
-
-🚀 CHALAMANDRA QUANTUMMIND XYZ
-🎯 DIALECTICAL QUANTUM ASSISTANT - Hybrid AI Challenge 2025
-🏆 ELITE SUBMISSION - Google Chrome Built-in AI Challenge 2025
-> DISRUPTIVE INNOVATION: The Dialectical Quantum Architecture resolves decisional paralysis with 100% local Superposition logic.
-> 
-🌟 INSTANT DEMO - LIVE EXTENSION
-[🎥 Video Demo] | [🚀 Live Extension]
-(⚠️ Replace with your public YouTube/Vimeo and Chrome Store URLs)
-🎯 UNIQUE PROBLEM SOLVED: QUANTUM DECISIONAL PARALYSIS
-The Problem: 87% of creatives get stuck in the analysis loop (Thesis vs. Antithesis), leading to decision fatigue.
-Our Goal: To transform 90 minutes of analysis into 0.8 seconds of reliable Synthesis.
-🔥 TRINITY XYZ ARCHITECTURE - DIALECTIC QUANTUM ENGINE
-Chalamandra uses the Trinity XYZ Architecture for Dialectical Fusion:
-| Component | Role in Process | AI Mechanism |
-|---|---|---|
-| 🧠 CHOLA (Thesis) | Ancestral Wisdom: Defines the core idea and initial optimal path. | Gemini Nano: Extracts sentiment, strengths, and contextualizes. |
-| ⚡ MALANDRA (Antithesis) | Disruptive Tech: Generates the strongest counter-argument (critical analysis). | Chrome APIs (6/6): Orchestrates APIs to generate friction and superposition. |
-| 🌟 FRESA (Synthesis) | Quantum Authenticity: Collapses the states into the most aligned decision. | Predictive Inverse Mechanics: Quantum collapse to the single solution. |
-🧠 ARCHITECTURE DIAGRAM: THE QUANTUM CORE
-The Dialectical Quantum Architecture residing in the Chrome Service Worker.
-[ CHALAMANDRA ARCHITECTURE: DIALECTIC QUANTUM ENGINE ]
-======================================================
-
-1.  INPUT (Popup)
-    |
-    v
-2.  QUANTUM ENGINE (Service Worker / Gemini Nano)
-    |
-    v
-    [ DIALECTIC CORE ] ------------------------------> [ ACTION APIs ]
-    |                                                |
-    | 🧠 THESIS (CHOLA)                               | 🛠️ Summarizer (Context)
-    | ⚡ ANTITHESIS (MALANDRA)                         | 🛠️ Rewriter/Writer (Synthesis)
-    | 🌟 SYNTHESIS (FRESA) ---------------------------> 🛠️ Prompt API (Orchestration)
-    |                                                |
-    | 🌊 Superposition of Hypotheses (4 States)
-    |
-    v
-3.  QUANTUM COLLAPSE (0.8s) -------------------------> 4. OUTPUT (Synthesis)
-    ^                                                   |
-    |                                                   v
-    [ FEEDBACK LOOP ] <--------------------------------- [ FEEDBACK (Explicit/Implicit) ]
-
-======================================================
-(Powered by Gemini Nano On-Device)
-
-📊 SCIENTIFIC VALIDATION AND IMPACT METRICS
-| Metric | Quantitative (KPI) | Qualitative (Outcome) | AI Justification |
-|---|---|---|---|
-| DECISION SPEED | 0.8 seconds (Target) | Ludicrous Acceleration. Constant flow state. | Gemini Nano On-Device: Processes dialectical logic locally (0.3s). |
-| CLARITY / ERROR | +87% Improvement (SOC Test) | Eliminates Decisional Paralysis. Alta confianza. | Dialectical Analysis: Actively resolves conflict (Antithesis). |
-| SUSTAINABILITY | 100% Data Privacy | Infinite Energy. Creative momentum. | Hybrid Architecture: 87% of decision processing is local. |
-| ADAPTABILITY | Continuous Learning (RL) | Real-time evolution. Always at the vanguard. | Quantum Update: Explicit/implicit feedback loop. |
-🎯 INNOVATION ALIGNMENT: CORE COMPETENCIES
-| Competency Focus | Justification (The XYZ Advantage) | Technical Evidence |
-|---|---|---|
-| Best Hybrid AI Application | The Power Source XYZ: Gemini Nano is the central engine. 87% of Dialectical logic runs locally for 100% privacy and 0.3s latency. | Uso de ai.languageModel.create() and logic in service-worker. |
-| Best Multimodal AI Application | Contextual Analysis: Fusion of Text Input (Popup) with Context Input (via webNavigation) for a holistic analysis. | processMultimodalInput and utilization of Prompt API multimodal support. |
-| Most Innovative Use of Chrome AI | The Trinity XYZ Architecture: Strategic use of 6 Chrome AI APIs not as isolated functions, but as interdependent gears of the Quantum Engine. | Integration of the 6 APIs with Thesis/Antithesis/Synthesis logic. |
-| Most Helpful Chrome Extension | Validated Impact: Solves Decisional Paralysis with validated metrics (+87% Clarity) and offers a real Flow System for the user. | Demostración de 0.8s decision-making speed. |
-📦 EXPRESS INSTALLATION - 3 MINUTES
-# CLONE REPOSITORY
-git clone [https://github.com/your-username/chalamandra-quantummind-xyz.git](https://github.com/your-username/chalamandra-quantummind-xyz.git)
-cd chalamandra-quantummind-xyz
-
-# (Optional) INSTALL DEPENDENCIES
-npm install
-
-# LOAD EXTENSION IN CHROME:
+# CARGAR EXTENSIÓN EN CHROME:
 # 1. Open Chrome and navigate to: chrome://extensions
 # 2. Toggle on "Developer mode."
 # 3. Click "Load unpacked" and select the project folder.
